@@ -27,7 +27,7 @@ namespace GuessNumber
             userGuessInfo = new(LabelsStrings.PLAYER_NAME);
 
             aiGuesserService = ServiceLocator.Instance.Get<AIGuesserService>();
-            numberGenerator = ServiceLocator.Instance.Get<PositiveNumberGenerator>();
+            numberGenerator = ServiceLocator.Instance.Get<INumberGenerator>();
 
             SetupLevel();
         }

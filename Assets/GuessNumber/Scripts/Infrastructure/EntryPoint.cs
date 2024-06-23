@@ -16,7 +16,7 @@ namespace GuessNumber
 
         private void Start()
         {
-            ServiceLocator.Instance.Register(new PositiveNumberGenerator(numberGeneratorSettings));
+            ServiceLocator.Instance.Register<INumberGenerator>(new PositiveNumberGenerator(numberGeneratorSettings));
             ServiceLocator.Instance.Register(new AIGuesserService(numberGeneratorSettings));
             ServiceLocator.Instance.Register(levelController);
 
